@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1601668799 source:c:\users\patri\desktop\tp2 abm\empleados.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"empleados.h"
+	"sector.h"
+
+1601668799 source:c:\users\patri\desktop\tp2 abm\main.c
+	<stdio.h>
+	<stdlib.h>
+	"empleados.h"
+	"sector.h"
+	<string.h>
+
+1601669028 c:\users\patri\desktop\tp2 abm\empleados.h
+
+1601567742 c:\users\patri\desktop\tp2 abm\sector.h
+
