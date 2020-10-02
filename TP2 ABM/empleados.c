@@ -41,9 +41,21 @@ void altaEmpleado(employee* empleado, int tam){
         printf("ingrese el salario: ");
         fflush(stdin);
         scanf("%f",&empleado[i].salary);
+
+         while(empleado[i].salary < 0 ){
+            printf("ingrese un salario positivo\n");
+            fflush(stdin);
+            scanf("%f",&empleado[i].salary);
+        }
         printf("ingrese el sector:\n\n 1-Administracion\n 2-Comunicaciones\n 3-Comercio\n\n ");
         fflush(stdin);
         scanf("%d",&empleado[i].sector);
+
+        while(empleado[i].sector < 1 || empleado[i].sector > 3 ){
+            printf("ingrese la opcion correcta\n");
+            fflush(stdin);
+            scanf("%d",&empleado[i].sector);
+        }
         empleado[i].id=i+1;
 
         empleado[i].isEmpty=0;
@@ -141,12 +153,24 @@ int estudiante_modificar(employee empleado[], int tam)
                     case 'c':
                         printf("ingrese el salario: ");
                         scanf("%f",&empleado[posicion].salary);
+
+                        while(empleado[posicion].salary < 0 ){
+                            printf("ingrese un salario positivo\n");
+                            fflush(stdin);
+                            scanf("%f",&empleado[posicion].salary);
+                        }
                         system("pause");
                         break;
                     case 'd':
                         printf("ingrese el nuevo sector:\n\n 1-Administracion\n 2-Comunicaciones\n 3-Comercio\n\n ");
                         fflush(stdin);
                         scanf("%d",&empleado[posicion].sector);
+
+                        while(empleado[posicion].sector < 1 || empleado[posicion].sector > 3 ){
+                            printf("ingrese la opcion correcta\n");
+                            fflush(stdin);
+                            scanf("%d",&empleado[posicion].sector);
+                        }
                         system("pause");
                         break;
                     case 's':
@@ -155,6 +179,7 @@ int estudiante_modificar(employee empleado[], int tam)
                         printf("\nOpcion no valida");
                 }
                 system("cls");
+
             }while(opcion!='s');
             retorno=0;
         }
@@ -251,7 +276,7 @@ case 2:
     ordenarDescendente(empleado,TAM);
     break;
 default:
-    printf("opcion incorrecta ");
+    printf("opcion incorrecta\n ");
 }
 }
 
@@ -269,7 +294,7 @@ float promedioSalarios(employee empleado[],int tam){
             }
             promedio=acumulador/contador;
         }else{
-            printf("no hay salarios que promediar");
+            printf("no hay salarios que promediar\n");
         }
 
     return promedio;
@@ -286,7 +311,7 @@ float totalSalarios(employee empleado[],int tam){
             }
         }
     }else{
-        printf("no hay salarios que sumar");
+        printf("no hay salarios que sumar\n");
     }
     return acumulador;
 }
@@ -305,7 +330,7 @@ int empleadosSuperanPromedio(employee empleado[],int tam){
            }
         }
     }else{
-        printf("no hay empleados que comparar");
+        printf("no hay empleados que comparar\n");
     }
     return contEmpSupPromedio;
 }
@@ -340,7 +365,7 @@ void imprimir(employee empleado[], int tam){
             mostrarSalarios(empleado,TAM);
         break;
     default:
-        printf("opcion incorrecta ");
+        printf("opcion incorrecta\n");
     }
 }
 

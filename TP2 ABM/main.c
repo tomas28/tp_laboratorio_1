@@ -13,15 +13,8 @@ int main()
 
     inicializarEmpleados(empleado,TAM);
 
-    /*eSector arraySector[TS]={
-    {1,"Administracion"},
-    {2,"Comunicaciones"},
-    {3,"Comercio"}
-    };*/
-
-
     while(seguir != 's'){
-        printf("\n 1-Alta empleado\n 2-Baja empleado\n 3-Modificar empleados\n 4-Ordenar\n 5-Listar empleados\n 6-Salir \n\n");
+        printf("\n 1-Alta empleado\n 2-Baja empleado\n 3-Modificar empleados\n 4-Listar empleados\n 5-Salir \n\n");
         fflush(stdin);
         scanf("%c",&seguir);
 
@@ -58,30 +51,22 @@ int main()
                 system("pause");
                 break;
 
-            case '5':
+            case '4':
                 if (flag==1){
                     printf("\nListar empleados\n\n");
                     imprimir(empleado,TAM);
-                    //estudiante_listar(empleado,TAM);
+
 
                 }else{
                     printf("no se puede listar sin antes dar de alta un empleado\n");
                 }
                 system("pause");
                 break;
-            case '4':
-                if (flag==1){
-                    //ordenarPorNombreYSector(empleado,TAM);
 
-                }else{
-                    printf("no se puede ordenar sin antes dar de alta un empleado\n");
-                }
-                system("pause");
-                break;
-
-            case '6':
+            case '5':
                 printf("usted salio del programa\n");
                 seguir='s';
+                system("pause");
                 break;
 
             default:
